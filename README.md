@@ -1,53 +1,76 @@
 ![image](https://github.com/rameshkumar359/youtube-warehousing-Analysis-Project/assets/96288285/fb079030-0840-4485-b65b-3c6fad4e3d04)# youtube-warehousing-Analysis-Project
-youtube datawarehousing,Data collection,MongoDb,API integration,Data Management Using SQL and Mongodb ,interactive visualization and Analysing application for youtube channel
-**Project Statement:**
-Ability to input a YouTube channel ID and retrieve all the relevant data (Channel name, subscribers, total video count, playlist ID, video ID, likes, dislikes, comments of each video) using Google API.
-Option to store the data in a MongoDB database as a data lake.
-Ability to collect data for up to 10 different YouTube channels and store them in the data lake by clicking a button.
-Option to select a channel name and migrate its data from the data lake to a SQL database as tables.
-Ability to search and retrieve data from the SQL database using different search options, including joining tables to get channel details
-**Application Flow**
-Set up a Streamlit app: Streamlit is a great choice for building data visualization and analysis tools quickly and easily. You can use Streamlit to create a simple UI where users can enter a YouTube channel ID, view the channel details, and select channels to migrate to the data warehouse.
-Connect to the YouTube API:
-You'll need to use the YouTube API to retrieve channel and video data. You can use the Google API client library for Python to make requests to the API.
-Store data in a MongoDB data lake: Once you retrieve the data from the YouTube API, you can store it in a MongoDB data lake. MongoDB is a great choice for a data lake because it can handle unstructured and semi-structured data easily.
-Migrate data to a SQL data warehouse: After you've collected data for multiple channels, you can migrate it to a SQL data warehouse. 
-You can use a SQL database such as MySQL or PostgreSQL for this.
-Query the SQL data warehouse: You can use SQL queries to join the tables in the SQL data warehouse and retrieve data for specific channels based on user input. 
-You can use a Python SQL library such as SQLAlchemy to interact with the SQL database.
-Display data in the Streamlit app: Finally, you can display the retrieved data in the Streamlit app. You can use Streamlit's data visualization features to create charts and graphs to help users analyze the data.
-Overall, this approach involves building a simple UI with Streamlit, retrieving data from the YouTube API,
-storing it in a MongoDB data lake, migrating it to a SQL data warehouse, querying the data warehouse with SQL, and displaying the data in the Streamlit app.
-** Example Data Extraction from Youtube to MongoDB :**
-{
-    "Channel_Name": {
-        "Channel_Name": "Example Channel",
-        "Channel_Id": "UC1234567890",
-        "Subscription_Count": 10000,
-        "Channel_Views": 1000000,
-        "Channel_Description": "This is an example channel.",
-        "Playlist_Id": "PL1234567890"
-    },
-    "Video_Id_1": {
-        "Video_Id": "V1234567890",
-        "Video_Name": "Example Video 1",
-        "Video_Description": "This is an example video.",
-        "Tags": ["example", "video"],
-        "PublishedAt": "2022-01-01T00:00:00Z",
-        "View_Count": 1000,
-        "Like_Count": 100,
-        "Dislike_Count": 10,
-        "Favorite_Count": 5,
-        "Comment_Count": 20,
-        "Duration": "00:05:00",
-        }
+![image](https://github.com/rameshkumar359/youtube-warehousing-Analysis-Project/assets/96288285/79455583-5cc4-454c-991a-188a8314f8ca)
 
-    This project aims to develop a user-friendly Streamlit application that utilizes the Google API to extract information on a YouTube channel, stores it in a MongoDB database, migrates it to a SQL data warehouse, 
-    and enables users to search for channel details and join tables to visualize and get insights bussiness value from the data.
+YouTube Data Harvesting and Warehousing
 
-      
+Introduction
 
+YouTube Data Harvesting and Warehousing is a project aimed at developing a user-friendly Streamlit application that leverages the power of the Google API to extract valuable information from YouTube channels. The extracted data is then stored in a MongoDB database, subsequently migrated to a SQL data warehouse, and made accessible for analysis and exploration within the Streamlit app.using plotly the application looks interactive and insightful.
 
+Key Technologies and Skills
 
+    Python scripting
+    Data Collection
+    API integration
+    Streamlit
+    Plotly
+    Data Management using MongoDB (Atlas) and SQL
+    Pandas dataframes
 
+Installation
 
+To run this project, you need to install the following packages:
+
+pip install google-api-python-client
+pip install pymongo
+pip install pandas
+pip install mysql.connector
+pip install streamlit
+pip install plotly
+
+Usage
+
+To use this project, follow these steps:
+
+    Clone the repository: git clone https://github.com/gopiashokan/Youtube-Harvesting-and-Warehousing.git
+    Install the required packages
+    Run the Streamlit app: streamlit run stream.py
+    Access the app in your browser at http://localhost:8501
+    Create your own database for the cloud and Local server
+
+Features
+
+    Retrieve data from the YouTube API, including channel information, playlists, videos, and comments.
+    Store the retrieved data in a MongoDB database.
+    Migrate the data to a SQL data warehouse.
+    Analyze and visualize data using Streamlit and Plotly.
+    Perform queries on the SQL data warehouse.
+    Gain insights into channel performance, video metrics, and more.
+
+Retrieving data from the YouTube API
+
+The project utilizes the Google API to retrieve comprehensive data from YouTube channels. The data includes information on channels, playlists, videos, and comments. By interacting with the Google API, we collect the data and merge it into a JSON file.
+
+Storing data in MongoDB
+
+The retrieved data is stored in a MongoDB database based on user authorization. If the data already exists in the database, it can be overwritten with user consent. This storage process ensures efficient data management and preservation, allowing for seamless handling of the collected data.
+
+Migrating data to a SQL data warehouse
+
+The application allows users to migrate data from MongoDB to a SQL data warehouse. Users can choose which channel's data to migrate. To ensure compatibility with a structured format, the data is cleansed using the powerful pandas library. Following data cleaning, the information is segregated into separate tables, including channels, playlists, videos, and comments, utilizing SQL queries.
+
+Data Analysis
+
+The project provides comprehensive data analysis capabilities using Plotly and Streamlit. With the integrated Plotly library, users can create interactive and visually appealing charts and graphs to gain insights from the collected data.
+
+    Channel Analysis: Channel analysis includes insights on playlists, videos, subscribers, views, likes, comments, and durations. Gain a deep understanding of the channel's performance and audience engagement through detailed visualizations and summaries.
+
+    Video Analysis: Video analysis focuses on views, likes, comments, and durations, enabling both an overall channel and specific channel perspectives. Leverage visual representations and metrics to extract valuable insights from individual videos.
+
+Utilizing the power of Plotly, users can create various types of charts, including line charts, bar charts, scatter plots, pie charts, and more. These visualizations enhance the understanding of the data and make it easier to identify patterns, trends, and correlations.
+
+The Streamlit app provides an intuitive interface to interact with the charts and explore the data visually. Users can customize the visualizations, filter data, and zoom in or out to focus on specific aspects of the analysis.
+
+With the combined capabilities of Plotly and Streamlit, the Data Analysis section empowers users to uncover valuable insights and make data-driven decisions.
+
+ 
