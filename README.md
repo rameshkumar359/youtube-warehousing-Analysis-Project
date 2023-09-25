@@ -73,4 +73,5 @@ The Streamlit app provides an intuitive interface to interact with the charts an
 
 With the combined capabilities of Plotly and Streamlit, the Data Analysis section empowers users to uncover valuable insights and make data-driven decisions.
 
- 
+ ### project-demo link:https://www.youtube.com/watch?v=3zy_o9mCJ0A&t=294s
+ ### linkedin-link:https://www.linkedin.com/in/ramesh-kumar-k-562891225/
